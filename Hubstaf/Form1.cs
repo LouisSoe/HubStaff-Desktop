@@ -16,6 +16,7 @@ using System.Net;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Hubstaf.Resources;
 
 namespace Hubstaf
 {
@@ -29,8 +30,6 @@ namespace Hubstaf
             InitializeComponent();
             shows();
             populateitem();
-            //loadgrid();
-            //getData();
         }
 
 
@@ -51,59 +50,7 @@ namespace Hubstaf
             pictureBox1.Visible = false;
             pictureBox2.Visible = true;
         }
-        private void getData()
-        {
-            try
-            {
-                string url = "https://23a3-158-140-172-123.ap.ngrok.io/api/project";
-                var webrequest = (HttpWebRequest)WebRequest.Create(url);
-                var webrespon = (HttpWebResponse)webrequest.GetResponse();
-                if ((webrespon.StatusCode == HttpStatusCode.OK))
-                {
-                    var reader = new StreamReader(webrespon.GetResponseStream());
-                    string data = reader.ReadToEnd();
-                    string id = "Data";
-                    var obj = JObject.Parse(data);
-                    var getdata = obj["Data"];
-
-                    DataTable dt = (DataTable)JsonConvert.DeserializeObject(getdata.ToString(), (typeof(DataTable)));
-                  ////  MessageBox.Show((string)dt.Rows[1]["nameProject"].ToString());
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        //dt.Rows[1].ToString();
-                    }
-
-                     ////   MessageBox.Show(dt.Rows.Count.ToString());
-                    //     MessageBox.Show(getdata.ToString());
-                    //foreach(DataRow row in dt.Rows)
-                    //{
-                    //    MessageBox.Show(dt);
-                    //}
-                    //var arr = JsonConvert.DeserializeObject<JArray>(getdata.ToString());
-                    //gunaDataGridView1.ReadOnly = true;
-                    //gunaDataGridView1.DataSource = getdata;
-                  ////  MessageBox.Show(String.Format("berhasil"));
-                }
-                else
-                {
-                    MessageBox.Show(String.Format("Status code = {0}", webrespon.StatusCode));
-                    MessageBox.Show(String.Format("gagal"));
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        void loadgrid()
-        {
-            HttpClient clint= new HttpClient();
-             clint.BaseAddress = new Uri("https://23a3-158-140-172-123.ap.ngrok.io/");
-            HttpResponseMessage response = clint.GetAsync("api/project").Result;
-            var project = response.Content.ReadAsAsync<IEnumerable<Model.ModelPro>>().Result;
-           // gunaDataGridView1.DataSource=project;
-        }
+        
 
         private void populateitem()
         {
@@ -117,41 +64,31 @@ namespace Hubstaf
 
                     var reader = new StreamReader(webrespon.GetResponseStream());
                     string data = reader.ReadToEnd();
-                    string id = "Data";
                     var obj = JObject.Parse(data);
                     var getdata = obj["Data"];
 
                     DataTable dt = (DataTable)JsonConvert.DeserializeObject(getdata.ToString(), (typeof(DataTable)));
-                    for(int i = 0; i < dt.Rows.Count; i++)
+
+                    int dataCount = dt.Rows.Count;
+                    projects[] projectList = new projects[dataCount];
+                    for (int i = 0; i < projectList.Length; i++)
                     {
-                        MessageBox.Show((string)dt.Rows[i]["nameProject"].ToString());
+                        projectList[i] = new projects();
+                        projectList[i].Name = getdata[i]["nameProject"].ToString();
+                        if (projectContainer.Controls.Count < 0)
+                        {
+                            projectContainer.Controls.Clear();
+                        }
+                        else
+                            projectContainer.Controls.Add(projectList[i]);
                     }
 
-                    //foreach (DataRow dr in dt.Rows)
-                    //{
-                    //    //dt.Rows[1].ToString();
-                    //}
                 }
             }catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             
-
-
-                projectcontainer[] projectcontainerss = new projectcontainer[20];
-            for (int i = 0; i < projectcontainerss.Length; i++)
-            {
-                projectcontainerss[i] = new projectcontainer();
-                projectcontainerss[i].Name = "nameProject";
-                //if (flowLayoutPanel1.Controls.Count >0)
-                //{
-                //    flowLayoutPanel1.Controls.Clear();
-                //}
-                //else
-
-                //    flowLayoutPanel1.Controls.Add(projectcontainerss[i]);
-            }
 
         }
 

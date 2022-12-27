@@ -45,6 +45,9 @@
     <Reference Include="Guna.UI">
       <HintPath>..\..\..\..\Downloads\framwork-main\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.3.9, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.9\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
     </Reference>
@@ -95,6 +98,7 @@
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -136,6 +140,12 @@
     <Compile Include="Model\ModelPro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\projects.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\projects.Designer.cs">
+      <DependentUpon>projects.cs</DependentUpon>
+    </Compile>
     <Compile Include="Timer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -184,6 +194,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources\projects.resx">
+      <DependentUpon>projects.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Timer.resx">
       <DependentUpon>Timer.cs</DependentUpon>
     </EmbeddedResource>

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.txtresult = new Guna.UI.WinForms.GunaTextBox();
@@ -49,16 +49,14 @@
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.gunaDataGridView2 = new Guna.UI.WinForms.GunaDataGridView();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.todoContainer = new Guna.UI.WinForms.GunaDataGridView();
+            this.projectContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.projectcontainer1 = new Hubstaf.projectcontainer();
             this.gunaPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView2)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.todoContainer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -80,18 +78,19 @@
             // 
             // txtresult
             // 
-            this.txtresult.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtresult.BaseColor = System.Drawing.Color.Black;
-            this.txtresult.BorderColor = System.Drawing.Color.Black;
+            this.txtresult.BackColor = System.Drawing.Color.AliceBlue;
+            this.txtresult.BaseColor = System.Drawing.Color.BlanchedAlmond;
+            this.txtresult.BorderColor = System.Drawing.Color.BlanchedAlmond;
             this.txtresult.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtresult.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtresult.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtresult.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtresult.FocusedBorderColor = System.Drawing.Color.Transparent;
+            this.txtresult.FocusedForeColor = System.Drawing.Color.Transparent;
             this.txtresult.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtresult.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtresult.ForeColor = System.Drawing.Color.Black;
             this.txtresult.Location = new System.Drawing.Point(97, 49);
             this.txtresult.Name = "txtresult";
             this.txtresult.PasswordChar = '\0';
+            this.txtresult.ReadOnly = true;
             this.txtresult.SelectedText = "";
             this.txtresult.Size = new System.Drawing.Size(160, 32);
             this.txtresult.TabIndex = 2;
@@ -123,7 +122,7 @@
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(41, 20);
+            this.gunaLabel2.Location = new System.Drawing.Point(52, 10);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(57, 17);
             this.gunaLabel2.TabIndex = 6;
@@ -320,76 +319,75 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Tesproj";
             // 
-            // gunaDataGridView2
+            // todoContainer
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.gunaDataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.todoContainer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.todoContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gunaDataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.gunaDataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaDataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gunaDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gunaDataGridView2.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gunaDataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gunaDataGridView2.EnableHeadersVisualStyles = false;
-            this.gunaDataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView2.Location = new System.Drawing.Point(355, 192);
-            this.gunaDataGridView2.Name = "gunaDataGridView2";
-            this.gunaDataGridView2.RowHeadersVisible = false;
-            this.gunaDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gunaDataGridView2.Size = new System.Drawing.Size(776, 236);
-            this.gunaDataGridView2.TabIndex = 24;
-            this.gunaDataGridView2.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.gunaDataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gunaDataGridView2.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView2.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gunaDataGridView2.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView2.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView2.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView2.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.gunaDataGridView2.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.gunaDataGridView2.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gunaDataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gunaDataGridView2.ThemeStyle.HeaderStyle.Height = 4;
-            this.gunaDataGridView2.ThemeStyle.ReadOnly = false;
-            this.gunaDataGridView2.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gunaDataGridView2.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gunaDataGridView2.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.gunaDataGridView2.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.DimGray;
-            this.gunaDataGridView2.ThemeStyle.RowsStyle.Height = 22;
-            this.gunaDataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gunaDataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.todoContainer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.todoContainer.BackgroundColor = System.Drawing.Color.White;
+            this.todoContainer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.todoContainer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.todoContainer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.todoContainer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.todoContainer.ColumnHeadersHeight = 4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.todoContainer.DefaultCellStyle = dataGridViewCellStyle12;
+            this.todoContainer.EnableHeadersVisualStyles = false;
+            this.todoContainer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.todoContainer.Location = new System.Drawing.Point(355, 192);
+            this.todoContainer.Name = "todoContainer";
+            this.todoContainer.RowHeadersVisible = false;
+            this.todoContainer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.todoContainer.Size = new System.Drawing.Size(776, 236);
+            this.todoContainer.TabIndex = 24;
+            this.todoContainer.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.todoContainer.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.todoContainer.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.todoContainer.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.todoContainer.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.todoContainer.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.todoContainer.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.todoContainer.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.todoContainer.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.todoContainer.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.todoContainer.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.todoContainer.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.todoContainer.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.todoContainer.ThemeStyle.HeaderStyle.Height = 4;
+            this.todoContainer.ThemeStyle.ReadOnly = false;
+            this.todoContainer.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.todoContainer.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.todoContainer.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.todoContainer.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.DimGray;
+            this.todoContainer.ThemeStyle.RowsStyle.Height = 22;
+            this.todoContainer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.todoContainer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // flowLayoutPanel1
+            // projectContainer
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.projectContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.flowLayoutPanel1.Controls.Add(this.projectcontainer1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(5, 360);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(328, 253);
-            this.flowLayoutPanel1.TabIndex = 26;
+            this.projectContainer.AutoScroll = true;
+            this.projectContainer.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.projectContainer.Location = new System.Drawing.Point(5, 360);
+            this.projectContainer.Name = "projectContainer";
+            this.projectContainer.Size = new System.Drawing.Size(328, 253);
+            this.projectContainer.TabIndex = 26;
             // 
             // gunaElipsePanel1
             // 
@@ -419,7 +417,7 @@
             // 
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Image = global::Hubstaf.Properties.Resources.hubstaf_removebg_preview__2___1_;
-            this.gunaPictureBox1.Location = new System.Drawing.Point(-3, 20);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(8, 10);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
             this.gunaPictureBox1.Size = new System.Drawing.Size(38, 35);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -437,15 +435,6 @@
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
-            // projectcontainer1
-            // 
-            this.projectcontainer1.BackColor = System.Drawing.Color.White;
-            this.projectcontainer1.Location = new System.Drawing.Point(3, 3);
-            this.projectcontainer1.Name = "projectcontainer1";
-            this.projectcontainer1.nameproject = null;
-            this.projectcontainer1.Size = new System.Drawing.Size(318, 44);
-            this.projectcontainer1.TabIndex = 0;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -454,8 +443,8 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1139, 613);
             this.Controls.Add(this.gunaElipsePanel1);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.gunaDataGridView2);
+            this.Controls.Add(this.projectContainer);
+            this.Controls.Add(this.todoContainer);
             this.Controls.Add(this.gunaPanel2);
             this.Controls.Add(this.gunaButton2);
             this.Controls.Add(this.pictureBox2);
@@ -480,12 +469,10 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.gunaPanel2.ResumeLayout(false);
             this.gunaPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView2)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.todoContainer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -515,10 +502,9 @@
         private Guna.UI.WinForms.GunaButton gunaButton2;
         private Guna.UI.WinForms.GunaPanel gunaPanel2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI.WinForms.GunaDataGridView gunaDataGridView2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private Guna.UI.WinForms.GunaDataGridView todoContainer;
+        private System.Windows.Forms.FlowLayoutPanel projectContainer;
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel1;
-        private projectcontainer projectcontainer1;
     }
 }
 
