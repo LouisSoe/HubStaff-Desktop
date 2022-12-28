@@ -25,11 +25,13 @@ namespace Hubstaf
        
         System.Timers.Timer t;
         int h, m, s;
+        public static Panel todoContainers;
         public Form1()
         {
             InitializeComponent();
             shows();
-            populateitem();
+            showProject();
+            todoContainers = todoContainer;
         }
 
 
@@ -52,11 +54,11 @@ namespace Hubstaf
         }
         
 
-        private void populateitem()
+        private void showProject()
         {
             try
             {
-                string url = "https://a3da-158-140-172-123.ap.ngrok.io/api/project";
+                string url = "http://127.0.0.1:8000/api/project/";
                 var webrequest = (HttpWebRequest)WebRequest.Create(url);
                 var webrespon = (HttpWebResponse)webrequest.GetResponse();
                 if ((webrespon.StatusCode == HttpStatusCode.OK))
@@ -74,7 +76,8 @@ namespace Hubstaf
                     for (int i = 0; i < projectList.Length; i++)
                     {
                         projectList[i] = new projects();
-                        projectList[i].Name = getdata[i]["nameProject"].ToString();
+                        projectList[i].projectName = getdata[i]["nameProject"].ToString();
+                        projectList[i].Id = getdata[i]["idProject"].ToString();
                         if (projectContainer.Controls.Count < 0)
                         {
                             projectContainer.Controls.Clear();
@@ -84,14 +87,12 @@ namespace Hubstaf
                     }
 
                 }
-            }catch (Exception ex)
+            }catch (Exception e)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(e.Message);
             }
-            
-
         }
-
+        
         private void OnTimeEvent(object sender, ElapsedEventArgs e)
         {
             Invoke(new Action(() =>

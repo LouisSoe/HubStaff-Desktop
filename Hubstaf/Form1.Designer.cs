@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.txtresult = new Guna.UI.WinForms.GunaTextBox();
@@ -49,14 +46,13 @@
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.todoContainer = new Guna.UI.WinForms.GunaDataGridView();
             this.projectContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.todoContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.gunaPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.todoContainer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -319,65 +315,6 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Tesproj";
             // 
-            // todoContainer
-            // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.todoContainer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.todoContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.todoContainer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.todoContainer.BackgroundColor = System.Drawing.Color.White;
-            this.todoContainer.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.todoContainer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.todoContainer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.todoContainer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.todoContainer.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.todoContainer.DefaultCellStyle = dataGridViewCellStyle12;
-            this.todoContainer.EnableHeadersVisualStyles = false;
-            this.todoContainer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.todoContainer.Location = new System.Drawing.Point(355, 192);
-            this.todoContainer.Name = "todoContainer";
-            this.todoContainer.RowHeadersVisible = false;
-            this.todoContainer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.todoContainer.Size = new System.Drawing.Size(776, 236);
-            this.todoContainer.TabIndex = 24;
-            this.todoContainer.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.todoContainer.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.todoContainer.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.todoContainer.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.todoContainer.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.todoContainer.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.todoContainer.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.todoContainer.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.todoContainer.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.todoContainer.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.todoContainer.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.todoContainer.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.todoContainer.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.todoContainer.ThemeStyle.HeaderStyle.Height = 4;
-            this.todoContainer.ThemeStyle.ReadOnly = false;
-            this.todoContainer.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.todoContainer.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.todoContainer.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.todoContainer.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.DimGray;
-            this.todoContainer.ThemeStyle.RowsStyle.Height = 22;
-            this.todoContainer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.todoContainer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
             // projectContainer
             // 
             this.projectContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -386,7 +323,7 @@
             this.projectContainer.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.projectContainer.Location = new System.Drawing.Point(5, 360);
             this.projectContainer.Name = "projectContainer";
-            this.projectContainer.Size = new System.Drawing.Size(328, 253);
+            this.projectContainer.Size = new System.Drawing.Size(328, 241);
             this.projectContainer.TabIndex = 26;
             // 
             // gunaElipsePanel1
@@ -435,6 +372,14 @@
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
+            // todoContainer
+            // 
+            this.todoContainer.BackColor = System.Drawing.Color.White;
+            this.todoContainer.Location = new System.Drawing.Point(355, 181);
+            this.todoContainer.Name = "todoContainer";
+            this.todoContainer.Size = new System.Drawing.Size(772, 237);
+            this.todoContainer.TabIndex = 28;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -442,9 +387,9 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1139, 613);
+            this.Controls.Add(this.todoContainer);
             this.Controls.Add(this.gunaElipsePanel1);
             this.Controls.Add(this.projectContainer);
-            this.Controls.Add(this.todoContainer);
             this.Controls.Add(this.gunaPanel2);
             this.Controls.Add(this.gunaButton2);
             this.Controls.Add(this.pictureBox2);
@@ -472,7 +417,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.gunaPanel2.ResumeLayout(false);
             this.gunaPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.todoContainer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -502,9 +446,9 @@
         private Guna.UI.WinForms.GunaButton gunaButton2;
         private Guna.UI.WinForms.GunaPanel gunaPanel2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI.WinForms.GunaDataGridView todoContainer;
         private System.Windows.Forms.FlowLayoutPanel projectContainer;
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel1;
+        private Guna.UI2.WinForms.Guna2Panel todoContainer;
     }
 }
 
